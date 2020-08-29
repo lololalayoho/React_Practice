@@ -1,2 +1,4 @@
 /* .child {border:선굵기 solid 컬러}*/
 .child {margin-bottom:5px; border: 10px solid #e1e1e1;}
+.ProcsC {box-sizing:border-box;border:1px solid; margin-bottom:20px;}
+.toggle{margin-bottom:20px;}

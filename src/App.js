@@ -1,10 +1,10 @@
 import React from 'react';
-import Parent from './Parent';
+import PropsP from './PropsP';
 
 function App() {
   return (
     <div className="App">
-      <Parent/> 
+      <PropsP/> 
     </div>
   );
 }
