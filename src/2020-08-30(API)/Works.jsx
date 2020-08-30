@@ -37,7 +37,7 @@ const Works = ({ }) => {
       event.preventDefault();
       axios.post("/Todos",todo)
       .then(resposne=>{
-         setTodo([todo,...todos]);
+         setTodo([response.data,...todos]);
          setTo({
             name : "",
             explain : "",
