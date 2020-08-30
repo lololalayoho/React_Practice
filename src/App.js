@@ -1,10 +1,10 @@
 import React from 'react';
-import PropsP from './PropsP';
+import Works from './2020-08-30(API)/Works'
 
 function App() {
   return (
     <div className="App">
-      <PropsP/> 
+      <Works/>
     </div>
   );
 }

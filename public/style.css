@@ -2,3 +2,14 @@
 .child {margin-bottom:5px; border: 10px solid #e1e1e1;}
 .ProcsC {box-sizing:border-box;border:1px solid; margin-bottom:20px;}
 .toggle{margin-bottom:20px;}
+.toggle.rest {margin-left:30px;position: relative;background-color:blue; color:#fff;}
+.toggle.work {margin-left:30px;position: relative;background-color:red; color:#fff;}
+.maketodo{position: relative;}
+.todotable{position: relative;margin-top:10px;}
+.todo_name{position:relative;margin-bottom:20px;}
+.todo_time{position:relative;margin-bottom:20px;}
+.todo_explain{position:relative;margin-bottom:20px;}
+.favorite {margin-bottom:10px; padding:10px; position:relative; border:1px solid #e1e1e1;}
+.button1{position: absolute; top:50%; right:80px; transforn:translateY(-50%);}
+.button2{position: absolute; top:50%; right:20px; transforn:translateY(-50%);}
+.button3{margin-left:20px;}
