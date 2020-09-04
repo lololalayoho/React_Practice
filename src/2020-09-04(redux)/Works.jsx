@@ -2,8 +2,10 @@ import React,{} from 'react';
 import Work from './Work';
 import {useState,useEffect} from 'react';
 import axios from 'axios';
+import {setPrint,setDoing} from '../Action/Common';
+import {connect} from 'react-redux'
 
-const Works = ({history, match}) => {
+const Works = ({history, match,doing,print,setDoing,setPrint}) => {
    let [todos,setTodo] = useState([]);
    let [todo,setTo] = useState({
       name : "",
@@ -60,7 +62,7 @@ const Works = ({history, match}) => {
           {
              addwork ?
              <div>
-             <form onSubmit={(event)=>{submit(event);}}>
+             <form onSubmit={(event)=>{submit(event);setDoing(todo.name);setPrint("생성");}}>
                <input className="todo_name" value = {todo.name} type="text" name="name" placeholder="할일명" onChange={(event) => {changeform(event);}}/>
                <br/>
                <input className="todo_explain" value = {todo.explain}  type="text" name="explain" placeholder="할일 설명" onChange={(event) => {changeform(event);}}/>
@@ -76,6 +78,7 @@ const Works = ({history, match}) => {
           <button className={value === "열일" ? "toggle work" : "toggle rest"} onClick={() => {toggle();}}>
              {value}
           </button>
+          <div className="alarm">"{doing}"가 {print}되었습니다.</div>
            {
             todos.map((todo)=>{
                return <Work key={todo.id} work = {todo} todos = {todos} setTodo = {setTodo}/>
@@ -84,4 +87,23 @@ const Works = ({history, match}) => {
        </div>
    );
 }
-export default Works;
+
+const mapStateToProps = (state) => {
+   return {
+       print : state.common.print,
+       doing : state.common.doing
+   }
+};
+
+const mapDispatchToProps = (dispatch) => {
+   return {
+       setPrint: (data) => {
+           dispatch(setPrint(data));
+       },
+       setDoing: (data) => {
+           dispatch(setDoing(data));
+       }
+   }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Works);

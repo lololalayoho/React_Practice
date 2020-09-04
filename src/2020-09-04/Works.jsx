@@ -17,7 +17,6 @@ const Works = ({history, match}) => {
    useEffect(()=>{
       axios.get('/todos')
       .then(response=>{
-         console.log(response.data);
          setTodo(response.data);
       })
    },[]);
@@ -80,7 +79,7 @@ const Works = ({history, match}) => {
             todos.map((todo)=>{
                return <Work key={todo.id} work = {todo} todos = {todos} setTodo = {setTodo}/>
             })
-         }
+          }
        </div>
    );
 }

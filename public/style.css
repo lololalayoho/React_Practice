@@ -4,7 +4,7 @@
 .toggle{margin-bottom:20px;}
 .toggle.rest {margin-left:30px;position: relative;background-color:blue; color:#fff;}
 .toggle.work {margin-left:30px;position: relative;background-color:red; color:#fff;}
-.maketodo{position: relative;}
+.maketodo{align-self: center;}
 .todotable{position: relative;margin-top:10px;}
 .todo_name{position:relative;margin-bottom:20px;}
 .todo_time{position:relative;margin-bottom:20px;}
@@ -13,3 +13,4 @@
 .button1{position: absolute; top:50%; right:80px; transforn:translateY(-50%);}
 .button2{position: absolute; top:50%; right:20px; transforn:translateY(-50%);}
 .button3{margin-left:20px;}
+.alarm {font-size:25px;margin-bottom: 40px;text-align: center;}
